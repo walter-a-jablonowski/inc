@@ -1,9 +1,5 @@
 <?php
 
-use Symfony\Component\Yaml\Yaml;
-use Symfony\Component\Yaml\Exception\ParseException;
-
-
 /*@
   
 */
@@ -30,17 +26,6 @@ function incn( $view, $args = [])  /*@*/
 */
 function inc1($view, ...$args)  /*@*/
 {
-  inc( $view, $args);
-}
-
-
-/*@
-
-*/
-function incy( $view, $args_file )  /*@*/
-{
-  $args = Yaml::parse( $args_file );
-
   inc( $view, $args);
 }
 

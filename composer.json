@@ -23,7 +23,8 @@
 
   "autoload": {
     "files": [
-      "src/inc.php"
+      "src/inc.php",
+      "src/inc_yml.php"
     ]
   }
 }
