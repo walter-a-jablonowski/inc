@@ -1,12 +1,14 @@
 <?php
 
-namespace WAJ\Lib\UI\Args;
+namespace WAJ\Lib\UI;
 
 
 /*@
+
   Part of Safe implementation
 
   TASK: Maybe use Args extends Safe
+
 */
 class Args /*@*/
 {

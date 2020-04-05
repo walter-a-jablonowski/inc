@@ -22,12 +22,12 @@
   },
 
   "autoload": {
-   "psr-4": {
-     "WAJ\\Lib\\UI\\Args\\": "src/"
-   },
-   "files": [
-      "src/inc.php",
-      "src/inc_yml.php"
-    ]
-  }
+    "psr-4": {
+      "WAJ\\Lib\\UI\\": "src/"
+    },
+    "files": [
+       "src/inc.php",
+       "src/inc_yml.php"
+     ]
+   }
 }
