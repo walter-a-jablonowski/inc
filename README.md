@@ -16,11 +16,11 @@ use
 
 ### Functions
 
-`inc( $view, $args = [])`  Includes file, hides args in scope, adds a line break (\n)
-`incn( $view, $args = [])` Like inc(), adds no break
-`inc1($view, ...$args)` Uses ...$args instead array
-`incy( $view, $args_file )` Uses yml args
-`sinc $view, $args = [])` Return html as string
+- `inc( $view, $args = [])`  Includes file, hides args in scope, adds a line break (\n)
+- `incn( $view, $args = [])` Like inc(), adds no break
+- `inc1($view, ...$args)` Uses ...$args instead array
+- `incy( $view, $args_file )` Uses yml args
+- `sinc $view, $args = [])` Return html as string
 
 
 ### View files
