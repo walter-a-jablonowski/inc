@@ -4,7 +4,7 @@ namespace WAJ\Lib\UI\Args;
 
 
 /*@
-  Part of Safe implementation. Diference: Raises Error in __get() if missing.
+  Part of Safe implementation
 
   TASK: Maybe use Args extends Safe
 */
@@ -12,11 +12,13 @@ class Args /*@*/
 {
 
   protected $args;
+  protected $throwExIfMissing;
 
 
-  public function __construct( $args = null )
+  public function __construct($args = null, $throwExIfMissing = false)
   {
     $this->args = $args;
+    $this->throwExIfMissing = $throwExIfMissing;
   }
 
 
@@ -37,7 +39,10 @@ class Args /*@*/
     if( $this->args && in_array( $name, array_keys( $this->args )))
       return $this->args[$name];
     
-    throw new \Exception( "Property $name unknown");
+    if( $this->throwExIfMissing)
+      throw new \Exception( "Property $name unknown");
+
+    return null;
   }
 
 
