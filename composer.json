@@ -1,0 +1,29 @@
+{
+  "name": "walter-a-jablonowski/inc",
+  "description": "Most tiny templating system",
+  "type": "library",
+  "keywords": ["template" ,"templating" , "simple", "easy", "small", "tiny", "smart"],
+  "homepage": "https://github.com/walter-a-jablonowski/inc",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Walter A. Jablonowski",
+      "email": "walter.a.jablonowski@gmail.com",
+      "homepage": "https://walter-a-jablonowski.github.io",
+      "role": "Developer"
+  }
+],
+
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+
+  "require": {
+    "php": ">=5.6"
+  },
+
+  "autoload": {
+    "files": [
+      "src/inc.php"
+    ]
+  }
+}
