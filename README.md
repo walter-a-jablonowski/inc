@@ -22,6 +22,19 @@ use
 - `incy( $view, $args_file )` Uses yml args
 - `sinc $view, $args = [])` Return html as string
 
+Class Args: A simple class representing arguments for $args. Can beu used as an Alternative for arrays.
+
+```php
+$args = new Args();
+$args->myArg = 1;
+
+// Nesting
+
+$args->subArgs = new Args(['myArg2' => 2]);
+```
+
+Also implemented: getData(), has(), ArrayAccess. See implemtation.
+
 
 ### View files
 

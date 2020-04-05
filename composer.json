@@ -22,7 +22,10 @@
   },
 
   "autoload": {
-    "files": [
+   "psr-4": {
+     "WAJ\\Lib\\UI\\Args\\": "src/"
+   },
+   "files": [
       "src/inc.php",
       "src/inc_yml.php"
     ]
