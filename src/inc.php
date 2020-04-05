@@ -5,7 +5,8 @@
 */
 function inc( $view, $args = [])  /*@*/
 {
-  extract($args);
+  if( ! is_object($args) )
+    extract($args);
   require($view);
   print "\n";
 }
@@ -16,7 +17,8 @@ function inc( $view, $args = [])  /*@*/
 */
 function incn( $view, $args = [])  /*@*/
 {
-  extract($args);
+  if( ! is_object($args) )
+    extract($args);
   require($view);
 }
 
@@ -35,7 +37,8 @@ function inc1($view, ...$args)  /*@*/
 */
 function sinc( $view, $args = [])  /*@*/
 {
-  extract($args);
+  if( ! is_object($args) )
+    extract($args);
 
   ob_start();                   // Alternative: $s = require()
   require($view);
