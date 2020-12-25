@@ -17,7 +17,6 @@ use
 ### Functions
 
 - `inc( $view, $args = [])` Includes file, hides args in scope, adds line break (\n)
-- `inc_nobr( $view, $args = [])` Like inc(), adds no break
 - `inc_args($view, ...$args)` Uses ...$args instead array
 - `inc_s $view, $args = [])` Return as string
 

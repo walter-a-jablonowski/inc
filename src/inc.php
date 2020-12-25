@@ -14,18 +14,6 @@ function inc( $view, $args = [])  /*@*/
 
 
 /*@
-
-*/
-function inc_nobr( $view, $args = [])  /*@*/
-{
-  if( ! is_object($args) )
-    extract($args);
-  
-  require($view);
-}
-
-
-/*@
   
 */
 function inc_args($view, ...$args)  /*@*/
