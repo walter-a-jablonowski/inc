@@ -30,9 +30,11 @@ function inc( $view, ...$args)  /*@*/
 
 
 /*@
-  
+
+same as inc(), returns '' if no args
+
 */
-function inc_s( $view, $args = [])  /*@*/
+function inc_s( $view, ...$args)  /*@*/
 {
   if( ! $view || count($args) == 0 )
     return '';
