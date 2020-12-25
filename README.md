@@ -16,11 +16,24 @@ use
 
 ### Functions
 
-- `inc( $view, $args = [])` Includes file, hides args in scope, adds line break (\n)
-- `inc_args($view, ...$args)` Uses ...$args instead array
-- `inc_s $view, $args = [])` Return as string
+- `inc( $view, $args)` Includes file, hides args in scope, adds line break (\n)
+- `inc($view, $arg1, 'arg2')` Uses single args instead array
+- `inc($view, $obj)` Uses some obj
+- `inc_s $view, $args)` Return as string
 
-Class Args: A simple class representing arguments for $args. Can be used as an alternative for arrays.
+
+### View files
+
+Inside view files just use inc() and PHP
+
+- Fields:      `<?= $php ?>`
+- Lists:       `<?php foreach( ... ): ?>`
+- Hierarchie:  Use a sub inc
+
+
+### Class Args
+
+A simple class representing arguments for $args. Can be used as an alternative for arrays.
 
 ```php
 $args = new Args();
@@ -32,15 +45,6 @@ $args->subArgs = new Args(['myArg2' => 2]);
 ```
 
 Also implemented: has(), ArrayAccess. See implementation.
-
-
-### View files
-
-Inside view files just use inc() and PHP
-
-- Fields:      `<?= $php ?>`
-- Lists:       `<?php foreach( ... ): ?>`
-- Hierarchie:  Use a sub inc
 
 
 ## LICENSE
