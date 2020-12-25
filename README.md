@@ -32,7 +32,7 @@ $args->myArg = 1;
 $args->subArgs = new Args(['myArg2' => 2]);
 ```
 
-Also implemented: getData(), has(), ArrayAccess. See implementation.
+Also implemented: has(), ArrayAccess. See implementation.
 
 
 ### View files
@@ -46,7 +46,7 @@ Inside view files just use inc() and PHP
 
 ## LICENSE
 
-Copyright (C) Walter A. Jablonowski 2018, MIT [License](LICENSE)
+Copyright (C) Walter A. Jablonowski 2018-2020, MIT [License](LICENSE)
 
 This library is build upon PHP (license see [credits](credits.md)) and has no further dependencies.
 
