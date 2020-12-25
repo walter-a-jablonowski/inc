@@ -7,26 +7,18 @@ namespace WAJ\Lib\UI;
 
   Part of Safe implementation
 
-  TASK: Maybe use Args extends Safe
-
 */
 class Args /*@*/
 {
 
   protected $args;
-  protected $throwExIfMissing;
+  protected $throwIfMissing;
 
 
-  public function __construct($args = null, $throwExIfMissing = false)
+  public function __construct($args = null, $throwIfMissing = false)
   {
     $this->args = $args;
-    $this->throwExIfMissing = $throwExIfMissing;
-  }
-
-
-  public function getData()
-  {
-    return $this->args;
+    $this->throwIfMissing = $throwIfMissing;
   }
 
 
@@ -41,8 +33,8 @@ class Args /*@*/
     if( $this->args && in_array( $name, array_keys( $this->args )))
       return $this->args[$name];
     
-    if( $this->throwExIfMissing)
-      throw new \Exception( "Property $name unknown");
+    if( $this->throwIfMissing)
+      throw new \Exception("Property $name unknown");
 
     return null;
   }

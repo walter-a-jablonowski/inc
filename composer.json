@@ -26,8 +26,7 @@
       "WAJ\\Lib\\UI\\": "src/"
     },
     "files": [
-       "src/inc.php",
-       "src/inc_yml.php"
+       "src/inc.php"
     ]
   }
 }

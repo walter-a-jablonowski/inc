@@ -16,11 +16,10 @@ use
 
 ### Functions
 
-- `inc( $view, $args = [])`  Includes file, hides args in scope, adds a line break (\n)
-- `incn( $view, $args = [])` Like inc(), adds no break
-- `inc1($view, ...$args)` Uses ...$args instead array
-- `incy( $view, $args_file )` Uses yml args
-- `sinc $view, $args = [])` Return html as string
+- `inc( $view, $args = [])` Includes file, hides args in scope, adds line break (\n)
+- `inc_nobr( $view, $args = [])` Like inc(), adds no break
+- `inc_args($view, ...$args)` Uses ...$args instead array
+- `inc_s $view, $args = [])` Return as string
 
 Class Args: A simple class representing arguments for $args. Can be used as an alternative for arrays.
 

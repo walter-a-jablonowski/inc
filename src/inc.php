@@ -7,6 +7,7 @@ function inc( $view, $args = [])  /*@*/
 {
   if( ! is_object($args) )
     extract($args);
+  
   require($view);
   print "\n";
 }
@@ -15,10 +16,11 @@ function inc( $view, $args = [])  /*@*/
 /*@
 
 */
-function incn( $view, $args = [])  /*@*/
+function inc_nobr( $view, $args = [])  /*@*/
 {
   if( ! is_object($args) )
     extract($args);
+  
   require($view);
 }
 
@@ -26,7 +28,7 @@ function incn( $view, $args = [])  /*@*/
 /*@
   
 */
-function inc1($view, ...$args)  /*@*/
+function inc_args($view, ...$args)  /*@*/
 {
   inc( $view, $args);
 }
@@ -35,7 +37,7 @@ function inc1($view, ...$args)  /*@*/
 /*@
   
 */
-function sinc( $view, $args = [])  /*@*/
+function inc_s( $view, $args = [])  /*@*/
 {
   if( ! is_object($args) )
     extract($args);

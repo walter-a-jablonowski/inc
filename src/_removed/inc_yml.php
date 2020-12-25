@@ -7,7 +7,7 @@ use Symfony\Component\Yaml\Exception\ParseException;
 /*@
 
 */
-function incy( $view, $args_file )  /*@*/
+function inc_yml( $view, $args_file )  /*@*/
 {
   $args = Yaml::parse( $args_file );
 
