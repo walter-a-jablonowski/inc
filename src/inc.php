@@ -16,8 +16,8 @@ function inc( $view, ...$args)  /*@*/
   
   // Single array or obj
   
-  if( ( is_array($args[0]) && count($args) == 1) ||
-      is_object($args[0])
+  if( ( is_array($args[0])  && count($args) == 1 ) ||
+      ( is_object($args[0]) && count($args) == 1 )
   )
     $args = $args[0];
   
@@ -39,8 +39,8 @@ function inc_s( $view, $args = [])  /*@*/
   
   // Single array or obj
   
-  if( ( is_array($args[0]) && count($args) == 1) ||
-      is_object($args[0])
+  if( ( is_array($args[0])  && count($args) == 1 ) ||
+      ( is_object($args[0]) && count($args) == 1 )
   )
     $args = $args[0];
 
