@@ -5,6 +5,10 @@ PHP itself is a templating system. This mini lib just adds a bit of functionalli
 
 ### Usage
 
+```
+composer require walter-a-jablonowski/inc
+```
+
 Instead of
 
 `$myarg = 1; require($view);  // where view uses $myarg`
