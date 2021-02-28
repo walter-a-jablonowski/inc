@@ -2,58 +2,61 @@
 
 /*@
 
-args either
+inc()
 
-- single array
-- multiple args
-- or single object
+ARGS:
+  args: single array or object
+RETURNS: '' if no view
 
 */
-function inc( $view, ...$args)  /*@*/
+function inc( string $INC_VIEW, $content = null ) : string  /*@*/
 {
-  if( ! $view || count($args) == 0 )
-    return;
-  
-  // Single array or obj
-  
-  if( ( is_array($args[0])  && count($args) == 1 ) ||
-      ( is_object($args[0]) && count($args) == 1 )
-  )
-    $args = $args[0];
-  
-  if( ! is_object($args) )
-    extract($args);
+  if( ! is_file($INC_VIEW) )  return '';  // TASK
 
-  require($view);
-  print "\n";
+  ob_start();                   // Alternative: $s = require()
+  require($INC_VIEW);
+  $INC_STR_R = ob_get_clean();  // var has unusual name
+
+  $INC_STR_R .= "\n";
+
+  return $INC_STR_R;
 }
 
 
 /*@
 
-same as inc(), returns '' if no args
+Variant like inc(), just uses text replacement
 
 */
-function inc_s( $view, ...$args)  /*@*/
+function inc2( string $view, $content = null ) : string  /*@*/
 {
-  if( ! $view || count($args) == 0 )
-    return '';
-  
-  // Single array or obj
-  
-  if( ( is_array($args[0])  && count($args) == 1 ) ||
-      ( is_object($args[0]) && count($args) == 1 )
-  )
-    $args = $args[0];
+  if( ! is_file($view) )  return '';
 
-  if( ! is_object($args) )
-    extract($args);
+  $s = file_get_contents($view);
 
-  ob_start();                   // Alternative: $s = require()
-  require($view);
-  $INC_STR_R = ob_get_clean();  // var has unusual name
+  foreach($content as $name => $arg)
+    $s = str_replace("{$name}", $arg, $s);
 
-  return $INC_STR_R;
+  $s .= "\n";
+
+  return $s;
+}
+
+
+/*@
+
+DEPR
+
+Variant of inc() -> output buffer
+$view would incb() subview
+
+*/
+function incb( string $INC_VIEW, $content = null ) : void  /*@*/
+{
+  if( ! is_file($INC_VIEW) )  return '';
+
+  require($INC_VIEW);
+  print "\n";
 }
 
 ?>
