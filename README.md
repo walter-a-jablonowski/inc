@@ -14,7 +14,7 @@ use `inc($view, ['myarg' => 1]);` hides scope
 
 **My page controller PHP file or class**
 
-ˋˋˋphp
+```php
 // Some PHP code preparing content
 // ...
 
@@ -30,7 +30,7 @@ $layout = inc('my/layout.html', [  // some BS nested grid for simplicity in own 
 ]);
 
 echo inc('my/page.html', ['content' => $layout] );  // insert page content
-ˋˋˋ
+```
 
 **Inside my/file.html**
 
@@ -45,11 +45,12 @@ use PHP for content and logic only
 
 ### Functions
 
-ˋˋˋphp
+```php
 $s = inc( $view, $args);  // string via output buffer, array args
-$s = inc($view, $obj);  // obj args
+$s = inc($view, $obj);    // obj args
 $s = inc2($view, $args);  // Variant of inc(), just uses text replacement (no PHP in view files)
-ˋˋˋ
+```
+
 - All add a line break (\n)
 - RETURNS: '' if no view
 
